@@ -7,7 +7,8 @@ $(function() {
         $.ajax({
 
             //リクエスト先のURLを設定（作成１)
-            url: ,
+            url: ajaxUrl
+            
 
         }).done(function(data){
 
@@ -15,6 +16,7 @@ $(function() {
             let result = JSON.parse(data);
             //解析データを整形
             // result.messageとresult.timeを改行で結合（作成２)
+            let text = result.message + '\n' + result.time;
             
 
             $("#ajax_return").text(text);
